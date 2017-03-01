@@ -1,0 +1,16 @@
+<div class="container">
+    <div data-role="content" class="content">
+      <p>Select an account from the list below.</p>
+      
+      <div class="btn-group-vertical" id="account-list" role="group" aria-label="Vertical button group">
+      	<% _.each(phoneNumbers, function(i){ 
+      			var phoneNumber = i.replace(/(\d\d\d)(\d\d\d)(\d\d\d\d)/, "$1-$2-$3"); %>
+      		<button type="button" data-number="<%= i %>" class="btn btn-default"><%= 
+      			phoneNumber
+      		%><span class="glyphicon glyphicon-chevron-right"></span></button>
+	  	<% }) %>
+	  </div>
+
+      
+    </div>
+</div>

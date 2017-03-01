@@ -1,0 +1,19 @@
+<% var phoneNumber = phoneNumber.replace(/(\d)(\d\d\d)(\d\d\d)(\d\d\d\d)/, "$1-$2-$3-$4"); %>
+<div class="container">
+	<div data-role="content" class="content">
+		<a class="btn btn-red btn-sm btn-round-sm back-button">
+		  <i class="fa fa-arrow-circle-left fa-lg"></i> Back
+		 </a>
+    	<div class="clearfix">
+	    	<section id="job-details" data-id="<%= id %>">
+	            <!-- changed by kurt: I removed the pikes I will add the division with css -->
+	    		<div><span class="profile-label">Job Type</span> <span><%= type %></span></div>
+	    		<div><span class="profile-label">Date</span> <span><%= date %></span></div>
+	    		<div><span class="profile-label">Phone Number</span> <span><%= phoneNumber %></span></div>
+	    		<div><span class="profile-label">ICCID</span> <span><%= iccid %></span></div>
+	    		<div><span class="profile-label">EID</span> <span><%= eid %></span></div>
+	    		<div><span class="profile-label">Description</span> <span><%= description %></span></div>
+	    	</section>
+    	</div>
+    </div>
+</div>

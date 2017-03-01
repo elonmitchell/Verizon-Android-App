@@ -1,0 +1,47 @@
+<!doctype html>
+<html class="no-js ui-mobile-rendering" lang="en">
+<head>
+	<title>Backbone.js, Require.js, and jQuery Mobile</title>
+	<meta name="description" content="">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=yes">
+	<link rel="stylesheet" href="css/opensans.css" type="text/css" charset="utf-8" />
+	<link rel="stylesheet" href="css/bootstrap.css">
+	<link rel="stylesheet" href="css/pageslider.css">
+	<link rel="stylesheet" href="css/ladda-themeless.min.css">
+	<link rel="stylesheet" href="css/component.css">
+	<link href="css/font-awesome.css" rel="stylesheet">
+	<link rel="stylesheet" href="css/main.css">
+	<script type="text/javascript" src="cordova.js"></script>
+	<script type="text/javascript" src="js/lib/spin.min.js"></script>
+	<script type="text/javascript" src="js/lib/ladda.min.js"></script>
+	<script src="js/lib/classie.js"></script>
+	<script src="js/lib/require-min.js"></script>
+
+	<script src="js/lib/pageslider.js"></script>
+    <script src="js/main.js"></script>
+</head>
+<!-- added by kurt: added login-screen class -->
+<body>
+<nav class="navbar navbar-default navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+        	<div id="page-title" class="navbar-brand" style="display: block;"><span id="page-title-text" class="page-title"></span></div>
+          <button type="button" class="navbar-toggle collapsed" data-target="#navbar" aria-expanded="false" aria-controls="navbar" style="display: none">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar top-bar"></span>
+            <span class="icon-bar middle-bar"></span>
+            <span class="icon-bar bottom-bar"></span>
+          </button>
+          <span id="alert-button"><i class="fa fa-exclamation-triangle fa-lg"></i></span>
+        </div>
+      </div>
+    </nav>
+    <script type="text/javascript" src="cordova-2.1.0.js"></script>
+    <script type="text/javascript" src="barcodescanner.js"></script>
+    <script type="text/javascript" src="js/index.js"></script>
+    <script type="text/javascript">
+    	app.initialize();
+    </script>
+</body>
+</html>
+<!-- changed by kurt: added pull-right to the button -->

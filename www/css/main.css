@@ -1,0 +1,620 @@
+html {
+	height: 100%;
+}
+body {
+	font-family: "open_sansregular";
+	text-shadow: 0 1px 0 #f3f3f3;
+	padding-top: 150px;
+	height: 100%;
+}
+
+.circle {
+  width: 100px;
+  height: 100px;
+  border-radius: 50px;
+  -webkit-box-sizing: border-box;
+  border: solid 3px rgba(168,168,168,0.2);
+  border-top-color: #888;
+  -webkit-animation: spin .7s infinite linear;
+  margin: 40px auto;
+}
+
+@-webkit-keyframes spin { 
+  100% { 
+    -webkit-transform: rotate(360deg); 
+  } 
+} 
+
+.content{
+	padding: 0px 15px;
+}
+
+.loading-message{
+	font-size: 14px;
+	text-align: center;
+}
+
+h2 {
+	font-size: 20px;
+	font-weight: normal;
+}
+
+h3 {
+	font-size: 16px;
+	font-weight: normal;
+	padding-left: 30px;
+}
+
+#active-profile-details {
+	text-align: center;
+}
+
+.profile-label {
+	font-weight: bold;
+}
+
+.header-icon {
+	color: #ef1d1d;
+}
+
+#pending-changes {
+	width: 93%;
+	margin: 0px auto;
+	height: 50px;
+	line-height: 50px;
+	text-align: center;
+	vertical-align: middle;
+	margin-top: 30px;
+	color: white;
+	text-shadow: none;
+}
+
+.pending-changes-yes {
+	background-color: red;
+}
+
+.pending-changes-no {
+	background-color: green;
+}
+
+.spinner {
+  display: inline-block;
+  opacity: 0;
+  width: 0;
+
+  -webkit-transition: opacity 0.25s, width 0.25s;
+  -moz-transition: opacity 0.25s, width 0.25s;
+  -o-transition: opacity 0.25s, width 0.25s;
+  transition: opacity 0.25s, width 0.25s;
+}
+
+.has-spinner.active {
+  cursor:progress;
+}
+
+.has-spinner.active .spinner {
+  opacity: 1;
+  width: auto; /* This doesn't work, just fix for unkown width elements */
+}
+
+.has-spinner.btn-mini.active .spinner {
+    width: 10px;
+}
+
+.has-spinner.btn-small.active .spinner {
+    width: 13px;
+}
+
+.has-spinner.btn.active .spinner {
+    width: 16px;
+}
+
+.has-spinner.btn-large.active .spinner {
+    width: 19px;
+}
+
+.page {
+	padding-top: 70px;
+}
+
+.btn {
+	text-shadow: none;
+	text-transform: uppercase;
+}
+.navbar-default .navbar-brand {
+	color: white;
+}
+
+.navbar-default .navbar-brand:hover,
+.navbar-default .navbar-brand:focus {
+  color: #fff;
+  background-color: transparent;
+}
+
+.navbar-default{
+	background-color: #ef1d1d;
+	border: none;
+}
+.navbar-header {
+	text-align: center;
+	text-shadow: none;
+	width: 100%;
+	margin: 0;
+}
+.navbar-brand {
+	/* background-image: url(../img/small-vz-logo-white.png); */
+	background-size: 40px 23px; 
+	background-repeat: no-repeat;
+	background-position: 15px 0px;
+	width: 100%;
+	height: 25px;
+	position: absolute;
+	top: 20px;
+	left: 0px;
+	padding-top: 0px;
+}
+.navbar-brand:after{
+	display: inline-block;
+    width: 35px;
+    height: 35px;
+    margin-right: 5px;
+    content: "";
+    background: url("../img/small-vz-logo-white.png") no-repeat 0 0;
+    background-size: 100%;
+	position: absolute;
+	right: 5px;
+}
+#alert-box {
+	display: none;
+	padding: 5px;
+	text-align: left;
+}
+input {
+	-webkit-box-shadow: none !important;
+}
+
+.btn-group-vertical {
+	width: 100%;
+}
+
+span.glyphicon.glyphicon-chevron-right {
+	float: right;
+	color: #888888;
+	margin-top: 5px
+}
+
+.navbar-default .navbar-toggle,
+.navbar-default .navbar-toggle:hover, 
+.navbar-default .navbar-toggle:focus {
+	border: none;
+	background: none;
+}
+
+.navbar-default .navbar-toggle .icon-bar {
+	background-color: white;
+}
+
+
+
+.navbar-toggle .icon-bar {
+    width: 22px;
+    transition: all 0.2s;
+  }
+.navbar-toggle .top-bar {
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+    -webkit-transform-origin: 10% 10%;
+    transform-origin: 10% 10%;
+  }
+.navbar-toggle .middle-bar {
+    opacity: 0;
+  }
+.navbar-toggle .bottom-bar {
+    -webkit-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+    -webkit-transform-origin: 10% 90%;
+    transform-origin: 10% 90%;
+  }
+
+
+
+.navbar-toggle.collapsed .top-bar {
+    -webkit-transform: rotate(0);
+    transform: rotate(0);
+  }
+.navbar-toggle.collapsed .middle-bar {
+    opacity: 1;
+  }
+.navbar-toggle.collapsed .bottom-bar {
+    -webkit-transform: rotate(0);
+    transform: rotate(0);
+  }
+
+.alert-danger {
+	color: #fff;
+	background-color: #cc0000;
+	border-color: #cc0000;
+	text-shadow: none;
+}
+/*------ Add by Kurt -------*/
+p{
+	padding-left: 15px;
+	padding-right: 15px;
+}
+h2{
+	/* padding-left: 15px; */
+	padding-right: 15px;
+	margin-top: 30px;
+	margin-bottom: 50px;
+}
+h2.back {
+	margin-top: 0px;
+}
+h2 a{
+	width: 30px;
+	height: 30px;
+	display:inline-block;
+	float: left;
+	margin: 0 20px 0 0;
+}
+h2 a::before, h2 a::after{
+	content: "";
+	display:inline-block;
+	float: left;
+	height: 15px;
+	width: 15px;
+	margin-left: 5px;
+	margin-top: 3px;
+	border-left : solid 3px #000;
+	-webkit-transform: rotate(-45deg); 
+	transform: rotate(-45deg);
+}
+h2 a::after{
+	margin-left: -15px;
+	-webkit-transform: rotate(45deg); 
+	transform: rotate(45deg);
+}
+.glyphicon-chevron-right::before, .glyphicon-chevron-right::after{
+	content: "";
+	display:inline-block;
+	float: left;
+	height: 10px;
+	width: 10px;
+	border-right : solid 1px #444;
+	-webkit-transform: rotate(45deg); 
+	transform: rotate(45deg);
+}
+.glyphicon-chevron-right::before{
+	margin-right: -15px;
+	-webkit-transform: rotate(-45deg); 
+	transform: rotate(-45deg);
+}
+/*
+#account-list h2{
+	background: url(../img/vz-icon-sprite.gif) no-repeat scroll 35px -56px rgba(0, 0, 0, 0);
+}
+*/
+
+#subscription-list h2{
+	/*
+	background: url(../img/vz-icon-sprite.gif) no-repeat scroll 5px -28px rgba(0, 0, 0, 0);
+	padding-left: 35px;
+*/
+}
+#account-details h2, #account-list h2{
+	/*
+background: url(../img/vz-icon-sprite.gif) no-repeat scroll 5px -87px rgba(0, 0, 0, 0);
+	padding-left: 35px;
+*/
+}
+#profileList h2 {
+	/*
+	background: url(../img/vz-icon-sprite.gif) no-repeat scroll 5px -28px rgba(0, 0, 0, 0);
+	padding-left: 35px;
+*/
+}
+#profile-list h2,
+#account h2,
+#subscription-details h2{
+	/* background: url(../img/vz-icon-sprite.gif) no-repeat scroll 35px -28px rgba(0, 0, 0, 0); */
+}
+.login-screen .page {
+	background-color: #ef1d1d;
+}
+.login-screen .navbar-brand {
+	background-image: none;
+}
+#branding-logo{
+	height: 150px;
+	background: url(../img/small-vz-logo-white.png) no-repeat center center;
+	background-size: 175px 100px; 
+}
+@media (max-height: 400px) {
+		#branding-logo{
+		height: 75px;
+		background: url(../img/small-vz-logo-white.png) no-repeat center center;
+		background-size: 100px 58px; 
+		}
+		.login-screen a.navbar-brand{
+			width: auto;
+			font-size: small;
+		}
+		.login-screen .navbar-fixed-top{
+			min-height: 30px;
+		}
+		.login-screen .page{
+			padding-top: 25px;
+		}
+		.login-screen .panel-heading{
+			padding: 5px 15px;
+		}
+		.login-screen #form-submit.btn-primary{
+			margin-top: 15px;
+		}
+}
+.container {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+.container > .navbar-header,
+.container-fluid > .navbar-header, 
+.container > .navbar-collapse, 
+.container-fluid > .navbar-collapse{
+	margin: 0;
+}
+.navbar-toggle{
+	margin-right: 5px;
+	float: left;
+	margin-top: 15px;
+}
+.panel{
+-webkit-box-shadow: none;
+        box-shadow: none;
+}
+.panel-default{
+	border : none;
+}
+.login-screen .panel-default {
+    background: transparent;
+}
+.panel-default > .panel-heading {
+    border: none;
+}
+.login-screen .panel-heading {
+    color: #fff;
+    text-shadow: 0 1px 0 #d10514;
+    background: transparent;
+}
+
+.panel-body {
+	text-align: center;
+}
+
+.btn {
+    padding: 6px 20px;
+}
+.btn-block {
+    display: inline-block;
+    width: 40%;
+    max-width: 300px;
+    outline: 0;
+}
+.btn-primary,
+.btn-danger {
+    font-family: open_sansbold;
+    font-size: 12px;
+    border: none;
+}
+
+.btn-primary {
+	background-color: hsl(201, 0%, 32%) !important;
+}
+
+.btn-primary[disabled] {
+	background-color: #aeaeae;
+}
+
+.btn-round{
+	border-radius: 17px;
+}
+.btn-round-sm{
+	/* border-radius: 15px; */
+}
+.btn-red{
+	background-color: #ef1d1d;
+	color: white;
+}
+
+.btn-red:active,
+.btn-red:visited{
+	color: white;	
+}
+
+.login-screen .btn-primary {
+    margin-top: 20px;
+    width: 100%;
+    background-color: hsl(201, 0%, 32%) !important;
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#515151", endColorstr="#515151");
+  background-image: -khtml-gradient(linear, left top, left bottom, from(#515151), to(#515151));
+  background-image: -moz-linear-gradient(top, #515151, #515151);
+  background-image: -ms-linear-gradient(top, #515151, #515151);
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #515151), color-stop(100%, #515151));
+  background-image: -webkit-linear-gradient(top, #515151, #515151);
+  background-image: -o-linear-gradient(top, #515151, #515151);
+  background-image: linear-gradient(#515151, #515151);
+  border-color: #515151 #515151 hsl(201, 0%, 32%);
+  color: #fff !important;
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.00);
+  -webkit-font-smoothing: antialiased;
+}
+.btn-group-vertical > .btn{
+	width: 100%;
+	/* border-radius: 0 !important; */
+	min-height: 50px;
+	border-color: #fff;
+	background: #e6e6e6;
+}
+.cbp-spmenu{
+	background-color: rgba(38,38,38,1.0);
+	background: url(../img/dark_stripes.png);
+	text-transform: uppercase;
+	font-size: 12px;
+	font-family: open_sansbold;
+	box-shadow: none;
+}
+
+.cbp-spmenu-open {
+	/* box-shadow: 3px 0px 6px #929292; */
+	-webkit-box-shadow: inset -4px 5px 8px -1px rgba(0,0,0,1);
+	-moz-box-shadow: inset -4px 5px 8px -1px rgba(0,0,0,1);
+	box-shadow: inset -4px 5px 8px -1px rgba(0,0,0,1);
+}
+
+.cbp-spmenu a{
+	border-bottom: solid 1px #2d2d2d;
+}
+
+.cbp-spmenu a:active,
+.cbp-spmenu a:hover {
+	background: #000;
+	-webkit-tap-highlight-color: #000;
+	color: #fff;
+	opacity: 1.0;
+}
+
+.cbp-spmenu-disabled,
+.cbp-spmenu a.cbp-spmenu-disabled:active,
+.cbp-spmenu a.cbp-spmenu-disabled:hover {
+	opacity: 0.3;
+	color: #fff;
+	background-color: rgba(38,38,38,0.3);
+}
+
+.btn-group-vertical > .btn:last-child:not(:first-child){
+	border-bottom-right-radius: 5px;
+	border-bottom-left-radius: 5px;
+}
+.btn-group-vertical > .btn:first-child:not(:last-child){
+	border-top-right-radius: 5px;
+	border-top-left-radius: 5px;
+} 
+
+.btn-group-vertical .btn:hover {
+	background-color: #cacaca;
+}
+
+.btn-group-vertical .btn:active {
+	background-color: #cacaca;
+	-webkit-box-shadow: none;
+          box-shadow: none;
+} 
+
+.btn-left {
+	text-align: left;
+	padding-left: 25px;
+}
+
+.back-button {
+	margin-right: 5px;
+	margin-bottom: 20px;
+	font-family: open_sansbold;
+}
+
+.back-button-span {
+	font-size: 15px;
+}
+
+#active-profile-details div span,
+#job-details div span,
+#subscription-profile-details span{
+	display: block;
+	float: left;
+	padding-left: 8px;
+}
+#active-profile-details div span:first-child,
+#job-details div span:first-child,
+#subscription-profile-details div span:first-child{
+	width: 35%;
+	text-align: right;
+	padding-right: 8px;
+	border-right: solid 2px #ccc;
+	clear: both;
+}
+#active-profile-details div span:last-child,
+#job-details div span:last-child,
+#subscription-profile-details div span:last-child{
+	width: 60%;
+	text-align: left;
+	word-break: break-word;
+}
+
+#profile-download {
+	margin-top: 10px;
+	padding: 0;
+}
+#profile-download-checkbox{
+	width: 30%;
+	float: left;
+	min-width: 100px;
+}
+input#make-active-checkbox{
+	margin-bottom:40px;
+	margin-right:5px;
+	float: left;
+}
+.modal-vertical-centered {
+	transform: translate(0, 50%) !important;
+	-ms-transform: translate(0, 50%) !important; /* IE 9 */
+	-webkit-transform: translate(0, 50%) !important; /* Safari and Chrome */
+}
+#subscription-list .glyphicon {
+	margin-top: -7px;
+}
+.button-wrap{
+	margin-top: 20px;
+	margin-right: auto;
+	margin-left: auto;
+}
+.button-wrap .btn-block {
+    width: 80%;
+    max-width: 300px;
+}
+.button-wrap .btn-block + .btn-block{
+	margin-top: 0;
+}
+
+#alert-button {
+	display: none;
+	color: white;
+	position: absolute	;
+	left: 55px;
+	top: 21px;
+}
+
+.app-title {
+	text-align: center;
+	line-height: 5px;
+}
+
+#app-version {
+	position: absolute;
+	bottom: 5px;
+	right: 5px;
+	font-size: 12px;
+	font-family: open_sansbold;
+	color: white;
+}
+
+.page-title {
+	font-family: open_sansbold;
+	text-transform: uppercase;
+	font-size: 14px;
+}
+
+.app-title h1 {
+	font-family: open_sansbold;
+	text-transform: uppercase;
+	font-size: 16px;
+}

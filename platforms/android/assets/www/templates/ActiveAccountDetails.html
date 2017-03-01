@@ -1,0 +1,23 @@
+<% var phoneNumber = phoneNumber.replace(/(\d)(\d\d\d)(\d\d\d)(\d\d\d\d)/, "$1-$2-$3-$4"); %>
+<div class="container">
+	<div data-role="content" class="content">
+        <!-- changed by kurt: changed the element from hr to div, added a clearfix -->
+    	<div class="clearfix">
+    	<section id="active-profile-details">
+            <!-- changed by kurt: I removed the pikes I will add the division with css -->
+    		<div><span class="profile-label">Profile Name</span> <span><%= profileName %></span></div>
+    		<div><span class="profile-label">Phone Number</span> <span><%= phoneNumber %></span></div>
+    		<div><span class="profile-label">Provider</span> <span><%= provider %></span></div>
+    		<div><span class="profile-label">Type</span> <span><%= description %></span></div>
+    		<div><span class="profile-label">Date Activated</span> <span><%= dateActivated %></span></div>
+    		<div><span class="profile-label">ICCID</span> <span><%= iccid %></span></div>
+    		<div><span class="profile-label">EID</span> <span><%= eid %></span></div>
+    	</section>
+    	</div>
+    	<% if(App.jobsStatusRunning){ %>
+    		<div id="pending-changes" class="pending-changes-yes">Pending changes.</div>
+    	<% }else{ %>
+    		<div id="pending-changes" class="pending-changes-no">No pending changes.</div>
+    	<% } %>
+    </div>
+</div>

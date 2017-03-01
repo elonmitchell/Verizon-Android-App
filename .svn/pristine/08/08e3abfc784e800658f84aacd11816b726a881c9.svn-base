@@ -1,0 +1,9 @@
+dependencies: \
+  /Users/jeremy1/Desktop/TEMP/VerizonSubscriber/platforms/ios/CordovaLib/Classes/CDVPlugin.m \
+  /Users/jeremy1/Desktop/TEMP/VerizonSubscriber/platforms/ios/CordovaLib/Classes/CDVPlugin.h \
+  /Users/jeremy1/Desktop/TEMP/VerizonSubscriber/platforms/ios/CordovaLib/Classes/CDVPluginResult.h \
+  /Users/jeremy1/Desktop/TEMP/VerizonSubscriber/platforms/ios/CordovaLib/Classes/CDVAvailability.h \
+  /Users/jeremy1/Desktop/TEMP/VerizonSubscriber/platforms/ios/CordovaLib/Classes/CDVAvailabilityDeprecated.h \
+  /Users/jeremy1/Desktop/TEMP/VerizonSubscriber/platforms/ios/CordovaLib/Classes/NSMutableArray+QueueAdditions.h \
+  /Users/jeremy1/Desktop/TEMP/VerizonSubscriber/platforms/ios/CordovaLib/Classes/CDVCommandDelegate.h \
+  /Users/jeremy1/Desktop/TEMP/VerizonSubscriber/platforms/ios/CordovaLib/Classes/CDVInvokedUrlCommand.h

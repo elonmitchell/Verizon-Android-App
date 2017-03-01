@@ -1,0 +1,6 @@
+<div class="container">
+	<div data-role="content" class="content">
+    	<div class="circle"></div>
+    	<p class="loading-message"><%= message %></p>
+	</div>
+</div>

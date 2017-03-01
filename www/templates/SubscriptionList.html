@@ -1,0 +1,35 @@
+<div class="container">
+    <div data-role="content" class="content">
+    	<p>Select a profile from the list below to see more details.</p>
+      <h3>Active Profile</h3>
+      <div class="btn-group-vertical" id="subscription-list-active" role="group">
+      	<% _.each(collection, function(model){ if(model.status == 'ACTIVE'){ var phoneNumber = model.phoneNumber.replace(/(\d)(\d\d\d)(\d\d\d)(\d\d\d\d)/, "$1-$2-$3-$4"); %>
+      		<button type="button" class="btn btn-default" data-id="<%= model.id %>">
+      			<%= model.profileName %><br><%= phoneNumber %>
+	  			<span class="glyphicon glyphicon-chevron-right"></span>
+	  		</button>
+	  	<% }}) %>
+	  </div>
+      
+      <h3>Verizon Profiles</h3>
+      <div class="btn-group-vertical" id="subscription-list-verizon" role="group">
+      	<% _.each(collection, function(model){ if(model.provider == 'VZW' && model.status == 'INACTIVE'){ var phoneNumber = model.phoneNumber.replace(/(\d)(\d\d\d)(\d\d\d)(\d\d\d\d)/, "$1-$2-$3-$4"); %>
+      		<button type="button" class="btn btn-default" data-id="<%= model.id %>">
+      			<%= model.profileName %><br><%= phoneNumber %>
+	  			<span class="glyphicon glyphicon-chevron-right"></span>
+	  		</button>
+	  	<% }}) %>
+	  </div>
+
+	  <h3>Partner Profiles</h3>
+	  <div class="btn-group-vertical" id="subscription-list-partner" role="group">
+      	<% _.each(collection, function(model){ if(model.provider != 'VZW' && model.status == 'INACTIVE'){ var phoneNumber = model.phoneNumber.replace(/(\d)(\d\d\d)(\d\d\d)(\d\d\d\d)/, "$1-$2-$3-$4"); %>
+      		<button type="button" class="btn btn-default">
+      			<%= model.profileName %> (<%= model.provider %>)<br><%= phoneNumber %>
+	  			<span class="glyphicon glyphicon-chevron-right"></span>
+	  		</button>
+	  	<% }}) %>
+	  </div>
+      
+    </div>
+</div>

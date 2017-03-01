@@ -1,0 +1,11 @@
+{
+    "id": 456,
+    "emailAddress": "jgomez@test.com",
+    "name": "Jeremy Gomez",
+    "customerNumbers": [
+        "5129998888",
+        "5125554444",
+        "5123338888",
+        "5127773333"
+    ]
+}

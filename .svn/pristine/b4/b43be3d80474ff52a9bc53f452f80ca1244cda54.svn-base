@@ -1,0 +1,13 @@
+<div class="container">
+    <div data-role="content" class="content">
+    <p>Select a job from the list below to see more details.</p>
+         <div class="btn-group-vertical" id="job-list" role="group">
+	      	<% _.each(collection, function(model){ %>
+	      		<button type="button" class="btn btn-default btn-left" data-id="<%= model.id %>">
+	      			<%= model.date %> - <%= model.type %>
+		  			<span class="glyphicon glyphicon-chevron-right"></span>
+		  		</button>
+		  	<% }) %>
+		  </div>
+    </div>
+</div>

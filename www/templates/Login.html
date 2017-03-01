@@ -1,0 +1,36 @@
+<div class="container">
+    <div class="row">
+    	<!-- added by kurt: added branding-logo element -->
+    	<div id="branding-logo" class="clearfix col-md-4 col-md-offset-4 col-sm-6 col-sm-offset-3 col-xs-8 col-xs-offset-2"></div>
+    	<!-- added by kurt: added col sizes -->
+		<div class="col-md-4 col-md-offset-4 col-sm-6 col-sm-offset-3 col-xs-8 col-xs-offset-2">
+    		<div class="panel panel-default">
+			  	<div class="panel-heading app-title">
+			    	<h1 class="panel-title">Subscription Manager</h1>
+			 	</div>
+			  	<div class="panel-body">
+			  		<div id="alert-box" class="alert alert-danger alert-dismissible fade in" role="alert"></div>
+			    	<form accept-charset="UTF-8" role="form">
+                    <fieldset>
+			    	  	<div class="form-group">
+			    		    <input class="form-control" placeholder="Username" name="username" id="username" type="text" value="" maxlength="25">
+			    		</div>
+			    		<div class="form-group">
+			    			<input class="form-control" placeholder="Password" name="password" id="password" type="password" value="">
+			    		</div>
+			    		<!--
+<div class="checkbox">
+			    	    	<label>
+			    	    		<input name="remember" type="checkbox" value="Remember Me"> Remember Me
+			    	    	</label>
+			    	    </div>
+-->
+			    		<a id="form-submit" class="btn btn-block btn-primary btn-md ladda-button login-btn" data-style="expand-right" data-size="xs"><span class="ladda-label">Log In</span></a>
+			    	</fieldset>
+			      	</form>
+			    </div>
+			</div>
+		</div>
+	</div>
+</div>
+<span id="app-version">v{BUILD_VERSION_NUMBER}</span>

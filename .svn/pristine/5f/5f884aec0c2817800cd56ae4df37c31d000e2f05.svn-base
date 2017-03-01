@@ -1,0 +1,9 @@
+<nav class="cbp-spmenu cbp-spmenu-vertical cbp-spmenu-left" id="cbp-spmenu-s1">
+	<a id="menu-home"><i class="fa fa-home header-icon"></i> Home</a>
+	<a id="menu-accounts"><i class="fa fa-mobile fa-lg header-icon"></i> Accounts</a>
+	<a id="menu-profiles"><i class="fa fa-cog header-icon"></i> Profiles</a>
+	<a id="menu-subscriptions"><i class="fa fa-cogs header-icon"></i> Subscriptions</a>
+	<a id="menu-history"><i class="fa fa-history header-icon"></i> Job History</a>
+	<a id="menu-scan" ontouchend="app.scan()"><i class="fa fa-qrcode header-icon"></i> Scan Code for Download</a>
+	<a id="menu-logout"><i class="fa fa-user header-icon"></i> Log Out</a>
+</nav>

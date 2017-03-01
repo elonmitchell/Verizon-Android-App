@@ -1,0 +1,42 @@
+{
+    "id": 5125551234,
+    "iccid": "1290485720837482",
+    "eid": "99905C5667D90124",
+    "profiles": [
+    	{
+    		"name": "",
+			"provider": "Verizon",
+			"type": "Prepaid",
+			"dateActivated": "",
+			"isActive": false
+		},
+		{
+    		"name": "My Profile",
+			"provider": "Verizon",
+			"type": "Postpaid",
+			"dateActivated": "2014-05-09",
+			"isActive": true
+		},
+		{
+    		"name": "",
+			"provider": "Telefonica",
+			"type": "Prepaid",
+			"dateActivated": "",
+			"isActive": false
+		},
+		{
+    		"name": "",
+			"provider": "Telefonica",
+			"type": "Postpaid",
+			"dateActivated": "",
+			"isActive": false
+		},
+		{
+    		"name": "",
+			"provider": "Telefonica",
+			"type": "Data",
+			"dateActivated": "",
+			"isActive": false
+		}
+    ]
+}

@@ -1,0 +1,54 @@
+<% var phoneNumber = phoneNumber.replace(/(\d)(\d\d\d)(\d\d\d)(\d\d\d\d)/, "$1-$2-$3-$4"); %>
+<div class="container">
+	<div data-role="content" class="content">
+    	<a class="btn btn-red btn-sm btn-round-sm back-button">
+		  <i class="fa fa-arrow-circle-left fa-lg"></i> Back
+		 </a>
+    	<div class="clearfix">
+	    	<section id="subscription-profile-details" data-id="<%= id %>">
+	            <!-- changed by kurt: I removed the pikes I will add the division with css -->
+	    		<div><span class="profile-label">Profile Name</span> <span><%= profileName %></span></div>
+	    		<div><span class="profile-label">Phone Number</span> <span><%= phoneNumber %></span></div>
+	    		<div><span class="profile-label">Provider</span> <span><%= provider %></span></div>
+	    		<div><span class="profile-label">Type</span> <span><%= description %></span></div>
+	    		<div><span class="profile-label">Date Activated</span> <span><%= dateActivated %></span></div>
+	    		<div><span class="profile-label">ICCID</span> <span><%= iccid %></span></div>
+	    		<div><span class="profile-label">EID</span> <span><%= eid %></span></div>
+				<div><span class="profile-label">isDefault</span> <span><%= isDefault %></span></div>
+				<div><span class="profile-label">Status</span> <span><%= status %></span></div>
+	    	</section>
+    	</div>
+    </div>
+    <div class="container">
+		<div data-role="content">
+			<div class="button-wrap text-center">
+				<!--% var isActive = "ACTIVE".equals(status) ?true:false ;%-->
+				<%var isActive = "active" == status.toLowerCase() ?true:false ;%>
+	            <% if(isActive){ %>
+					<% if(isDefault == "true"){ %>
+						<!--<button id="profile-disable-btn" class="btn btn-block btn-primary btn-md" disabled >Disable this profile</button>
+						<br/>
+						<br/>
+						<button id="profile-stop-btn" class="btn btn-block btn-danger btn-md " disabled>Delete this profile</button>-->
+						<div><span >This is a default and active profile.No operation can be performed</span> </div>
+						<br/>
+						<br/>
+					<% } else { %>
+						<button id="profile-disable-btn" class="btn btn-block btn-primary btn-md" >Disable this profile</button>
+						<br/>
+						<br/>
+						<button id="profile-stop-btn" class="btn btn-block btn-danger btn-md " >Delete this profile</button>
+					<% } %>
+				<% } else { %>
+					<button id="profile-active-btn" class="btn btn-block btn-primary btn-md" >Make this my active profile</button>
+					<br/>
+					<br/>
+					<% if(isDefault != "true"){ %>
+						<button id="profile-stop-btn" class="btn btn-block btn-danger btn-md " >Delete this profile</button>
+					<% } %>
+				<% } %>
+						
+			</div>
+		</div>
+	</div>
+</div>
